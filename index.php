@@ -21,13 +21,18 @@ include 'database.php';
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td><a href= "">VIEW</a></td>
-          <td><a href= "">UPDATE</a></td>
-          <td><a href= "">DELETE</a></td>
-        </tr>
+        <?php
+        if(!empty($rooms)){
+          foreach ($rooms as $room) { ?>
+            <tr>
+              <td><?php echo $room['id'] ?></td>
+              <td><?php echo $floor['id'] ?></td>
+              <td><a href= "">VIEW</a></td>
+              <td><a href= "">UPDATE</a></td>
+              <td>DELETE</td>
+            </tr>
+          <?php }
+        } ?>
       </tbody>
     </table>
   </body>
