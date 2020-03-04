@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<?php
+ include __DIR__ . '/../partials/header.php';
+?>
   <body>
     <?php
       include 'server.php';
