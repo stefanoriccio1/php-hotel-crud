@@ -9,7 +9,7 @@
 
   if ($result && $result->num_rows > 0) {
     $room = $result->fetch_assoc();
-    var_dump($room);
+    
 
   }
   elseif ($result) {
