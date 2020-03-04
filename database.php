@@ -8,16 +8,21 @@
     die();
   }
 
-  $sql "SELECT * from `stanze`";
+  $sql = "SELECT * from `stanze`";
   $result = $conn ->query($sql);
+  //var_dump($result);
 
   if ($result && $result->num_rows > 0) {
-
+    while($row = $result->fetch_assoc()) {
+    var_dump($row);
+    }
   }
-  elseif {
+  elseif ($result) {
     echo 'No results';
   }
   else{
     echo 'Query error';
   }
+
+  $conn->close();
 ?>
