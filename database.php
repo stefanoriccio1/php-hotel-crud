@@ -13,8 +13,10 @@
   //var_dump($result);
 
   if ($result && $result->num_rows > 0) {
+    $rooms = [];
     while($row = $result->fetch_assoc()) {
-     echo 'ID'. ' - ' .$row['id'];
+     //echo 'ID'. ' - ' .$row['id'];
+     $rooms[] = $row;
     }
   }
   elseif ($result) {
