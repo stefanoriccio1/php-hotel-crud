@@ -1,5 +1,9 @@
 <?php
-  include 'database.php';
+  include __DIR__ . '/../database.php';
+
+  if(empty($_GET['id'])){
+    die('ID non esistente');
+  }
 
   $idRoom= $_GET['id'];
 
@@ -9,7 +13,7 @@
 
   if ($result && $result->num_rows > 0) {
     $room = $result->fetch_assoc();
-    
+
 
   }
   elseif ($result) {
