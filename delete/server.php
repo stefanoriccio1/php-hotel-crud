@@ -7,20 +7,26 @@
 
   $idRoom= $_POST['id'];
 
+  //controllo esistenza ID
+  $sql = " DELETE from `stanze` WHERE `id` = $idRoom ";
+  $result = $conn ->query($sql);
+
+
+  if ($result && $result->num_rows == 0) {
+    die('incorrect ID');
+  }
+
+ //se esite lo cancelliamo
 
   $sql = " DELETE from `stanze` WHERE `id` = $idRoom ";
   $result = $conn ->query($sql);
 
 
-  if ($result && $result->num_rows > 0) {
-    $room = $result->fetch_assoc();
-
-  }
-  elseif ($result) {
-    echo 'No results';
+  if ($result) {
+    header("Location: $basePath?roomNumber= $idRoom");
   }
   else{
-    echo 'Query error';
+    echo 'Sorry, something went wrong';
   }
 
   $conn->close();

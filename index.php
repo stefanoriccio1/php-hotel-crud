@@ -4,6 +4,11 @@ include 'partials/header.php';
 include 'partials/footer.php';
 ?>
 
+<?php if(!empty($_GET['roomNumber'])) { ?>
+  <div class="alert">
+    Hai cancellato la stanza id : <?php echo $_GET ['roomNumber'] ?>
+  </div>
+<?php } ?>
     <div class="container">
       <div class="row">
         <div class="col-12">
