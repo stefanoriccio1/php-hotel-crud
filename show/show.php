@@ -1,7 +1,7 @@
 <?php
  include __DIR__ . '/../partials/header.php';
+ include __DIR__ . '/../partials/footer.php';
 ?>
-  <body>
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -19,5 +19,3 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
