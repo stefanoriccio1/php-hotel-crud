@@ -13,6 +13,7 @@ include 'partials/header.php';
             <thead>
               <tr>
                 <th>ID</th>
+                <th>Room Number</th>
                 <th>Floor</th>
                 <th></th>
                 <th></th>
@@ -25,6 +26,7 @@ include 'partials/header.php';
                 foreach ($rooms as $room) { ?>
                   <tr>
                     <td><?php echo $room['id'] ?></td>
+                    <td><?php echo $room['room_number'] ?></td>
                     <td><?php echo $room['floor'] ?></td>
                     <td><a href= "show/show.php?id=<?php echo $room['id'] ?>">VIEW</a></td>
                     <td><a href= "">UPDATE</a></td>

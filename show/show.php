@@ -2,7 +2,7 @@
  include __DIR__ . '/../partials/header.php';
 ?>
   <body>
-    <div class="cintainer">
+    <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="card">
