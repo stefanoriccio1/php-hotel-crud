@@ -30,7 +30,12 @@ include 'partials/header.php';
                     <td><?php echo $room['floor'] ?></td>
                     <td><a href= "show/show.php?id=<?php echo $room['id'] ?>">VIEW</a></td>
                     <td><a href= "">UPDATE</a></td>
-                    <td>DELETE</td>
+                    <td>
+                      <form action="delete/delete.php" method="post">
+                        <input type="hidden" name="id" value="<?php echo $room['id'] ?>">
+                        <input class= "btn-primary" type="submit" name="" value="DELETE">
+                      </form>
+                    </td>
                   </tr>
                 <?php }
               } ?>
