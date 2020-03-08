@@ -33,7 +33,7 @@ include 'partials/header.php';
                     <td>
                       <form action="delete/delete.php" method="post">
                         <input type="hidden" name="id" value="<?php echo $room['id'] ?>">
-                        <input class= "btn-primary" type="submit" name="" value="DELETE">
+                        <input class= "btn-danger" type="submit" name="" value="DELETE">
                       </form>
                     </td>
                   </tr>
