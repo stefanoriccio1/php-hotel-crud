@@ -1,5 +1,5 @@
 <?php
- include 'server.php';
+include 'database.php';
  include __DIR__ . '/../partials/header.php';
  include __DIR__ . '/../partials/footer.php';
 
@@ -7,24 +7,15 @@
    $idRoom = $_GET['id'];
  }
 
- //controllo esistenza ID
- $sql = " SELECT * from `stanze` WHERE `id` = $idRoom ";
- $result = $conn ->query($sql);
-
-
- if ($result && $result->num_rows == 0) {
-   die('incorrect ID');
- }
-
- //se esite proseguiamo
- 
- $sql = " SELECT * from `stanze` WHERE `id` = $idRoom ";
+ $sql = " SELECT * from `stanze` WHERE `id` = '$idRoom' ";
  $result = $conn ->query($sql);
 
 
  if ($result && $result->num_rows > 0) {
    $room = $result->fetch_assoc();
-
+ }
+ else{
+   die('incorrect ID');
  }
 ?>
 

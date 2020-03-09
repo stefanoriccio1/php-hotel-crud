@@ -2,7 +2,16 @@
   include 'database.php';
 
   if(!empty($_POST['id'])){
-    die('ID no inserted')
+    die('ID no inserted');
+  }
+  if(!empty($_POST['beds'])){
+    die('Number of beds no inserted');
+  }
+  if(!empty($_POST['room_number'])){
+    die('Room number no inserted');
+  }
+  if(!empty($_POST['floor'])){
+    die('Floor no inserted');
   }
 
   $idRoom = $_POST['id'];
@@ -11,17 +20,25 @@
   $room_number = $_POST['room_number'];
 
 
-  $sql = " SELECT * from `stanze` WHERE `id` = $idRoom ";
+  $sql = " SELECT * FROM `stanze` WHERE `id` = '$idRoom' ";
   $result = $conn ->query($sql);
 
 
   if ($result && $result->num_rows > 0) {
     $room = $result->fetch_assoc();
-
   }
   else{
     die('incorrect ID');
   }
 
-  $sql = "UPDATE  `stanze` SET `room_number`= , `beds`= , `floor`=  WHERE `id`= $idRoom";
+  $sql = "UPDATE  `stanze` SET `room_number`= $room_number, `beds`= $beds , `floor`=$floor  WHERE `id`= $idRoom";
+
+  $result = $conn ->query($sql);
+
+  if($result){
+    header("Location: $basePath/show/show.php?id=$idRoom");
+  }
+  else{
+    echo 'KO';
+  }
  ?>
