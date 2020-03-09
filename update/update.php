@@ -7,6 +7,17 @@
    $idRoom = $_GET['id'];
  }
 
+ //controllo esistenza ID
+ $sql = " SELECT * from `stanze` WHERE `id` = $idRoom ";
+ $result = $conn ->query($sql);
+
+
+ if ($result && $result->num_rows == 0) {
+   die('incorrect ID');
+ }
+
+ //se esite proseguiamo
+ 
  $sql = " SELECT * from `stanze` WHERE `id` = $idRoom ";
  $result = $conn ->query($sql);
 
