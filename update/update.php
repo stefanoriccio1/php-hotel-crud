@@ -20,7 +20,7 @@
           <input  class="form-control"type="text" name="beds" value="">
         </div>
         <div class="form-group">
-          <input class="form-control" type="hidden" name="id" value="">
+          <input type="hidden" name="id" value="">
           <input class="form-control" class= "btn btn-submit" type="submit" value="Salva">
         </div>
       </form>
