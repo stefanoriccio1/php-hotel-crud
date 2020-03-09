@@ -1,8 +1,9 @@
 <?php
+  include_once __DIR__ . '/../env.php';
   include 'database.php';
 
   if(!empty($_POST['id'])){
-    die('ID no inserted');
+    die('Id no inserted');
   }
   if(!empty($_POST['beds'])){
     die('Number of beds no inserted');

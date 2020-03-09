@@ -1,5 +1,5 @@
 <?php
-include 'database.php';
+ include 'database.php';
  include __DIR__ . '/../partials/header.php';
  include __DIR__ . '/../partials/footer.php';
 
