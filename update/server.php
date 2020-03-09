@@ -24,7 +24,6 @@
   $sql = " SELECT * FROM `stanze` WHERE `id` = '$idRoom' ";
   $result = $conn ->query($sql);
 
-
   if ($result && $result->num_rows > 0) {
     $room = $result->fetch_assoc();
   }
@@ -32,9 +31,17 @@
     die('incorrect ID');
   }
 
-  $sql = "UPDATE  `stanze` SET `room_number`= $room_number, `beds`= $beds , `floor`=$floor  WHERE `id`= $idRoom";
+  $sql = "UPDATE `stanze` SET `room_number` = ?, `beds` = ?, `floor`=?  WHERE `id`= ?";
 
-  $result = $conn ->query($sql);
+  $stmt = $conn->prepare($sql);
+  var_dump($stmt); die();
+  $stmt->bind_param("iiii", $room_number, $beds, $floor, $idRooms);
+  $stm->execute();
+
+
+  //$sql = "UPDATE  `stanze` SET `room_number`= $room_number, `beds`= $beds , `floor`=$floor  WHERE `id`= $idRoom";
+
+  //$result = $conn ->query($sql);
 
   if($result){
     header("Location: $basePath/show/show.php?id=$idRoom");
