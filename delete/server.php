@@ -8,7 +8,7 @@
   $idRoom= $_POST['id'];
 
   //controllo esistenza ID
-  $sql = " DELETE from `stanze` WHERE `id` = $idRoom ";
+  $sql = " SELECT from `stanze` WHERE `id` = $idRoom ";
   $result = $conn ->query($sql);
 
 

@@ -2,16 +2,16 @@
   include_once __DIR__ . '/../env.php';
   include 'database.php';
 
-  if(!empty($_POST['id'])){
+  if(empty($_POST['id'])){
     die('Id no inserted');
   }
-  if(!empty($_POST['beds'])){
+  if(empty($_POST['beds'])){
     die('Number of beds no inserted');
   }
-  if(!empty($_POST['room_number'])){
+  if(empty($_POST['room_number'])){
     die('Room number no inserted');
   }
-  if(!empty($_POST['floor'])){
+  if(empty($_POST['floor'])){
     die('Floor no inserted');
   }
 
