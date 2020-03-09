@@ -37,7 +37,6 @@
 
   $stmt->bind_param("iiii", $room_number, $beds, $floor, $idRoom);
   $stmt->execute();
-    var_dump($stmt); die();
 
 
 
@@ -45,7 +44,7 @@
 
   //$result = $conn ->query($sql);
 
-  if($result){
+  if($stmt->affected_rows > 0){
     header("Location: $basePath/show/show.php?id=$idRoom");
   }
   else{
