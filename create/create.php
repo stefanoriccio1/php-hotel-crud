@@ -14,11 +14,11 @@
         </div>
         <div class="form-group">
           <label for="floor">Piano</label>
-          <input class="form-control" type="text" name="floor" placeholedr= "Inserisci il numero del piano" value="">
+          <input class="form-control" type="text" name="floor" placeholder= "Inserisci il numero del piano" value="">
         </div>
         <div class="form-group">
           <label for="beds">Numero Letti</label>
-          <input  class="form-control"type="text" name="beds" placeholder "Inserisci il numero di letti" value="">
+          <input  class="form-control"type="text" name="beds" placeholder = "Inserisci il numero di letti" value="">
         </div>
         <div class="form-group">
           <input type="hidden" name="id" value="">

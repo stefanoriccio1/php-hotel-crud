@@ -31,7 +31,7 @@
     die('incorrect ID');
   }
 
-  $sql = "UPDATE `stanze` SET `room_number` = ?, `beds` = ?, `floor`=?  WHERE `id`= ?";
+  $sql = "UPDATE `stanze` SET `room_number` = ?, `beds` = ?, `floor`=?, `updated_at` = NOW() WHERE `id`= ?";
 
   $stmt = $conn->prepare($sql);
 
