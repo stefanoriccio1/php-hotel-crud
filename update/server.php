@@ -34,9 +34,11 @@
   $sql = "UPDATE `stanze` SET `room_number` = ?, `beds` = ?, `floor`=?  WHERE `id`= ?";
 
   $stmt = $conn->prepare($sql);
-  var_dump($stmt); die();
-  $stmt->bind_param("iiii", $room_number, $beds, $floor, $idRooms);
-  $stm->execute();
+
+  $stmt->bind_param("iiii", $room_number, $beds, $floor, $idRoom);
+  $stmt->execute();
+    var_dump($stmt); die();
+
 
 
   //$sql = "UPDATE  `stanze` SET `room_number`= $room_number, `beds`= $beds , `floor`=$floor  WHERE `id`= $idRoom";
