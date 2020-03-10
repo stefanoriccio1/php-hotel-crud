@@ -19,4 +19,5 @@
   $sql = "INSERT INTO `stanze` (`beds`, `floor`, `room_number`, `created_at`, `updated_at`) VALUES (?,?,?, NOW(), NOW())";
 
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param("iii");
+  $stmt->bind_param("iii", $beds, $floor, $room_number);
+  $stmt -> execute();
