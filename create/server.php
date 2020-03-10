@@ -22,8 +22,8 @@
   $stmt->bind_param("iii", $beds, $floor, $room_number);
   $stmt -> execute();
 
-  if(isset($stmt ->insert_id)){
-    header("Location: $basePath/show/show.php?id=$stmt ->insert_id");
+  if(isset($stmt->insert_id)){
+    header("Location: $basePath/show/show.php?id=$stmt->insert_id");
   }
   else{
     echo 'KO';
