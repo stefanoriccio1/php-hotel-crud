@@ -12,6 +12,10 @@
     die('Floor no inserted');
   }
 
+  $beds = $_POST['beds'];
+  $floor = $_POST['floor'];
+  $room_number = $_POST['room_number'];
+
   $sql = "INSERT INTO `stanze` (`beds`, `floor`, `room_number`, `created_at`, `updated_at`) VALUES (?,?,?, NOW(), NOW())";
 
   $stmt = $conn->prepare($sql);
