@@ -21,7 +21,6 @@
           <input  class="form-control"type="text" name="beds" placeholder = "Inserisci il numero di letti" value="">
         </div>
         <div class="form-group">
-          <input type="hidden" name="id" value="">
           <input class="form-control" class= "btn btn-submit" type="submit" value="Salva">
         </div>
       </form>
