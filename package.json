@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "handlebars": "^4.7.3"
+    "handlebars": "^4.7.7"
   }
 }
